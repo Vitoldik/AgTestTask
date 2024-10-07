@@ -1,0 +1,49 @@
+{% extends 'structure/global.twig' %}
+
+{% block title %}Номера{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+    {% include 'webpack-imports-app.twig' %}
+{% endblock %}
+
+{# TODO HTML разметка самой страницы #}
+{% block body %}
+    <div class="container">
+        <div class="number-container">
+            <div class="number-container__left">
+                <label for="free_search">Выбранный номер:</label>
+                <input type="text" name="free_search" id="free_search" placeholder="Введи от 1 до 10 цифр">
+
+                Категории:
+                <div class="categories">
+                    {% for category in filters.number_categories %}
+                        <button class="category-button" style="background-color: #{{ category.hex }}" data-id="{{ category.id }}">{{ category.name }}</button>
+                    {% endfor %}
+                </div>
+                Операторы:
+                <div class="operators">
+                    {% for operator in filters.operators %}
+                        <button class="operator-button" data-id="{{ operator.id }}">
+                            <div class="operator-button__icon"></div>
+                            <span class="operator-button__text">{{ operator.name }}</span>
+                        </button>
+                    {% endfor %}
+                </div>
+                <label for="region">Регион:</label>
+                <select id="region" name="region">
+                    {% for region in filters.regions %}
+                        <option value="{{ region.id }}">{{ region.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="number-container__right">
+
+            </div>
+        </div>
+
+    </div>
+
+
+    {% include 'structure/footer.twig' %}
+{% endblock %}
