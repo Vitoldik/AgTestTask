@@ -8,7 +8,7 @@
 
 ### 1. Верстка страницы
 
-- Сверстать страницу на основе Figma [макета](https://www.figma.com/design/wdrDPrqmUp](https://www.figma.com/design/wdrDPrqmUp0AO6VO2WPVW7/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5?node-id=0-1&node-type=canvas))
+- Сверстать страницу на основе Figma [макета](https://www.figma.com/design/wdrDPrqmUp0AO6VO2WPVW7/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5?node-id=0-1&node-type=canvas)
 - Необходимо реализовать адаптивный дизайн для мобильных и десктопных устройств.
 
 ### 2. Фильтры
