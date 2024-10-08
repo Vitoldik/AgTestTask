@@ -46,4 +46,9 @@
 
 
     {% include 'structure/footer.twig' %}
+    <script>
+        window.categories = {{ filters.number_categories|json_encode|raw }}
+        window.operators = {{ filters.operators|json_encode|raw }}
+        window.regions = {{ filters.regions|json_encode|raw }}
+    </script>
 {% endblock %}
