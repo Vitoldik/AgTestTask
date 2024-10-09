@@ -57,7 +57,7 @@ readonly class FindAllNumbersAction
             $qb->where($qb->expr()->in('operator_id', DatabaseUtils::quoteValues($conn, $filters['operators'])));
         }
 
-        if (isset($filters['region'])) {
+        if (isset($filters['region']) && $filters['region'] != 0) {
             $qb->where($qb->expr()->eq('region_id', $qb->createPositionalParameter($filters['region'])));
         }
 

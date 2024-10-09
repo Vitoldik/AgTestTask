@@ -32,6 +32,7 @@
                 </div>
                 <label for="region">Регион:</label>
                 <select id="region" name="region">
+                    <option value="0">Выбрать регион</option>
                     {% for region in filters.regions %}
                         <option value="{{ region.id }}">{{ region.name }}</option>
                     {% endfor %}
